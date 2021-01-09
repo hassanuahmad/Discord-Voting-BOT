@@ -13,4 +13,4 @@ Commands:
 - !vote <person>
  This command takes a people and reacts with +1 and -1
  
-[Adding more features to it!]
+-> Adding more features to it! <-

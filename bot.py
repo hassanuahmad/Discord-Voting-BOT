@@ -1,8 +1,12 @@
 import discord
 from discord.ext import commands
+from discord import Intents
 from discord.utils import get
 
-bot = commands.Bot(command_prefix = "!")
+intents = Intents.default()
+intents.members = True
+
+bot = commands.Bot(command_prefix = "!" , intents = intents)
 
 ### ------------------------- !map -------------------- ###
 
@@ -57,6 +61,19 @@ async def command_error(ctx, error):
         await ctx.send("```You don't have permission to use the !" + ctx.command.name + " command```")
     elif isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("```Insufficient Arguments\n!vote <name>```")
+
+### ------------------------- !clear -------------------- ###
+
+@bot.command()
+async def clear(ctx, amount = 10):
+    await ctx.channel.purge(limit = amount)
+
+### ------------------------- Say "Welcome" After Someone Joins + Tally Counter  -------------------- ###
+
+@bot.event
+async def on_member_join(member):
+    ment = member.mention
+    await bot.get_channel(797272268962660363).send(f"is that really him, is that rlly Bt, is that really {ment}. no no its the pokemon cards guy, no pokemon in here, get em OUT OF HERE!!!!")
 
 ### ------------------------- BOT Online -------------------- ###
 

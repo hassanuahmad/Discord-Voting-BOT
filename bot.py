@@ -84,4 +84,4 @@ async def on_ready():
 
 ### ------------------------- BOT Token -------------------- ###
 
-bot.run("TOKEN") #replce TOKEN with your BOT's TOKEN
+bot.run("TOKEN") #replace TOKEN with your BOT's TOKEN

@@ -73,7 +73,7 @@ async def clear(ctx, amount = 10):
 @bot.event
 async def on_member_join(member):
     ment = member.mention
-    await bot.get_channel(797272268962660363).send(f"is that really him, is that rlly Bt, is that really {ment}. no no its the pokemon cards guy, no pokemon in here, get em OUT OF HERE!!!!")
+    await bot.get_channel(797272268962660363).send(f"is this really him, is that rlly Bt, is that really {ment}. no no its the pokemon cards guy, no pokemon in here, get em OUT OF HERE!!!!")
 
 ### ------------------------- BOT Online -------------------- ###
 
